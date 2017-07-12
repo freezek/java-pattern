@@ -3,7 +3,7 @@ import org.junit.Test;
 /**
  * Created by ChenTao on 2017/7/12.
  */
-public class test {
+public class TestDoWhile {
 
     @Test
     public void testDoWhile(){
