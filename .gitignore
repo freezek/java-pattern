@@ -20,7 +20,7 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-.idea
+java-patern/.idea/
 java-pattern/target/
 # 备注：在首次提交本地项目到github的时候可能会报错，常用错误如下。
 #错误一：git remote add origin https://github.com/XXX/XX 报错 remote origin already exists. 这是因为你本地配置了git的全局配置remote地址origin通过
