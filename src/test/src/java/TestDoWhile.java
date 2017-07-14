@@ -2,6 +2,7 @@ import org.junit.Test;
 
 /**
  * Created by ChenTao on 2017/7/12.
+ * Junit测试类
  */
 public class TestDoWhile {
 
