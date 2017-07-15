@@ -4,7 +4,7 @@ package com.ikaimen.pattern.BuilderPattern;
  * Created by ChenTao on 2017/7/12.
  * 具体建造者
  */
-public class ConcreaterProduct extends Builder {
+public class ConcreateBuilder extends Builder {
 
     private  Product product = new Product();
 

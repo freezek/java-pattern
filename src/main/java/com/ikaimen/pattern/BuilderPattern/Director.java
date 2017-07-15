@@ -6,7 +6,7 @@ package com.ikaimen.pattern.BuilderPattern;
  */
 public class Director {
 
-    private  Builder builder = new ConcreaterProduct();
+    private  Builder builder = new ConcreateBuilder();
 
     //构建不同的产品
 
