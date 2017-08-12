@@ -35,11 +35,19 @@ package com.ikaimen.pattern.ChainPattern;
  * 一个业务逻辑来处理；日元 ，欧元。。。这些都不用再对原有的业务逻辑产生很大改变，通过扩展实现类就可以很好的解决这些需求变更的问题。
  *
  * 责任链在实际的项目中使用也是比较多的，我曾经做过一个这样的项目，界面上有一个用户注册功能，注册用户分两种，一种是vip用户，也及时在该单位办理过业务的 ，一种是普通用户，一个用户的注册
- * 要填写一堆信息，VIP用户只要比普通用户多了一个输入项：VIP序列号。注册后还需激活，VIP和普通用户的激活流程也是不同的，VIP是自动发邮箱到用户的邮箱中就损激活了，普通用户要发送短信才能
+ * 要填写一堆信息，VIP用户只要比普通用户多了一个输入项：VIP序列号。注册后还需激活，VIP和普通用户的激活流程也是不同的，VIP是自动发邮箱到用户的邮箱中就算激活了，普通用户要发送短信才能
  * 激活，为什么呢？获得手机好拿以后好发送 广告短信！项目组就采用了责任链模式，不管从前台传递过来的是VIP用户还是普通用户用户信息，统一传递到一个处理入口，通过责任链来完成任务处理。
  *
  */
 public abstract class Handler {
+
+    public final static int FATHER_LEVEL_REQUEST = 1;
+
+    public final  static int HUSBAND_LEVEL_REQUEST = 2;
+
+    public final static int SON_LEVEL_REQUEST = 3;
+
+    private int level = 0;
 
     private Handler nextHandler;
 
@@ -50,7 +58,7 @@ public abstract class Handler {
         Response response = null;
 
         //判断是否是自己的处理级别
-        if (this.getHandleLevel().equals(request.getRequestLevel())) {
+        if (this.getHandleLevel().getLevel().equals(request.getRequestLevel().getLevel())) {
 
             response = this.echo(request);
         } else {
@@ -77,4 +85,11 @@ public abstract class Handler {
 
     //每个处理者都必须实现处理任务
     protected abstract Response echo(Request request);
+
+
+    public Handler(int level){
+
+        this.level = level;
+
+    }
 }

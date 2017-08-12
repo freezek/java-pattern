@@ -6,8 +6,18 @@ package com.ikaimen.pattern.ChainPattern;
  */
 public class Request {
 
+    private Level level ;
+
+    public Request(){}
+
+    public Request(Level level) {
+        this.level = level;
+    }
+
+
+
     public Level getRequestLevel(){
 
-        return null;
+        return this.level;
     }
 }

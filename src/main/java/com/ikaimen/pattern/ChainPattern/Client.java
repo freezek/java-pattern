@@ -17,8 +17,10 @@ public class Client {
 
         handler2.setNext(handler3);
 
+        Level level = new Level("2");
+
         //提交请求，返回结果
-        Response response = handle1.handleMessage(new Request());
+        Response response = handle1.handleMessage(new Request(level));
     }
 
 }
