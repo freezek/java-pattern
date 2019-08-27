@@ -1,5 +1,7 @@
 package com.ikaimen.fastjson;
 
+import java.io.Serializable;
+
 /**
  * @ClassName User
  * @Description TODO
@@ -8,10 +10,8 @@ package com.ikaimen.fastjson;
  * @ModifyDate 2019/6/28 7:54 PM
  * @Version 1.0
  */
-public class User  {
-    {
-        System.out.println("hello");
-    }
+public class User  implements Serializable{
+
     private String name;
 
     private String sex;

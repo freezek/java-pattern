@@ -25,7 +25,7 @@ public class TestHasMap {
 
         while (iterator.hasNext()){
             Map.Entry entry = (Map.Entry) iterator.next();
-            System.out.println(entry.getValue());
+            System.out.println(entry.getValue().hashCode());
         }
 
     }
