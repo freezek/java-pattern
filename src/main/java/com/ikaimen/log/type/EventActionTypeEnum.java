@@ -1,0 +1,86 @@
+package com.ikaimen.log.type;
+
+/**
+ * @author IBM CHEN ZHI KAN
+ * @create 2018/1/23
+ */
+public enum EventActionTypeEnum {
+    //推题动作
+    SELECT_MONGO("mongo查询", "SELECT_MONGO"),
+    MONGO_FIND_ITEM("mongo查询题的信息","MONGO_FIND_ITEM"),
+    PRINT_INPUT_PARAM("接口层传递入参", "PRINT_INPUT_PARAM"),
+    PRINT_OUTPUT_PARAM("接口层打印出参", "PRINT_OUTPUT_PARAM"),
+    PRINT_IN_PARAM("打印入参", "PRINT_IN_PARAM"),
+    PRINT_EXCEPTION("打印异常", "PRINT_EXCEPTION"),
+    RETURN_BEFORE_ACTIVITY("动作未完成返回上一个动作", "RETURN_BEFORE_ACTIVITY"),
+    COURSE_END_VAILDATE("检查课程是否学完", "COURSE_END_VAILDATE"),
+    UPDATE_TARGET("更新target状态", "UPDATE_TARGET"),
+    UPDATE_CURRENT_ACTIVITY("更新当前activity type", "UPDATE_CURRENT_ACTIVITY"),
+    UPDATE_LEARNMAPCOUNTER("变更LEARNMAPCOUNTER状态", "UPDATE_LEARNMAPCOUNTER"),
+    UPDATE_ABILITY("更新能力值", "UPDATE_ABILITY"),
+    UPDATE_EXCLUDED_ITEM("更新做题记录", "UPDATE_EXCLUDED_ITEM"),
+    UPDATE_TARGET_RANGE("更改图谱范围", "UPDATE_TARGET_RANGE"),
+    RECOMMEND_NEXT_ASSESMENT_LO("推送下一个测试知识点", "RECOMMEND_NEXT_ASSESMENT_LO"),
+    RECOMMEND_NEXT_CURRENT_LO("继续推送当前知识点", "RECOMMEND_NEXT_CURRENT_LO"),
+    RECOMMEND_NEXT_STUDY_LO("推送下一个学习知识点", "RECOMMEND_NEXT_STUDY_LO"),
+    RECOMMEND_NEXT_LO("推送下一个知识点", "RECOMMEND_NEXT_LO"),
+    RECOMMEND_TEST_QUESTION("推送测试题", "RECOMMEND_TEST_QUESTION"),
+    RECOMMEND_STUDY_QUESTION("推送学习题", "RECOMMEND_STUDY_QUESTION"),
+    RECOMMEND_NEXT_ITEM("获取下一题", "RECOMMEND_NEXT_ITEM"),
+    RECOMMEND_NEXT_EXCEPTION("推题异常处理", "RECOMMEND_NEXT_EXCEPTION"),
+    CAL_CONDITION_METRIC("计算条件指标", "CAL_CONDITION_METRIC"),
+    CURRENT_ITEM_PROCESS("当前环节","CURRENT_ITEM_PROCESS"),
+    GET_RECOMMEND_LOS("获取可推荐知识点集合", "GET_RECOMMEND_LOS"),
+    GET_REPEAT_SESSION("可重复进入SESSION", "GET_REPEAT_SESSION"),
+    VIEW_LO_STATUS("知识点状态掌握情况","VIEW_LO_STATUS"),
+    LO_STATUS_REASON("知识点掌握原因", "LO_STATUS_REASON"),
+    RULE_TROGGERING("规则触发", "RULE_TROGGERING"),
+    TARGET_COMPLETED("全部target完成，更新goal", "TARGET_COMPLETED"),
+    UPDATE_PARENT_LOS("更新父类知识点状态", "UPDATE_PARENT_LOS"),
+    UPDATE_ROOT_LOS("更新父类知识点状态", "UPDATE_ROOT_LOS"),
+    EVENT_IS_USE("EVENT IS USE", "EVENT_IS_USE"),
+
+
+    PRINT_INPUT_PARAM_TRANS("打印传递能力值入参", "PRINT_INPUT_PARAM_TRANS"),
+    PRINT_OUTPUT_PARAM_TRANS("打印传递能力值出参", "PRINT_OUTPUT_PARAM_TRANS"),
+    PRINT_INPUT_PARAM_FORGET("打印遗忘曲线入参", "PRINT_INPUT_PARAM_FORGET"),
+    PRINT_OUTPUT_PARAM_FOTGET("打印遗忘曲线出参", "PRINT_OUTPUT_PARAM_FORGET"),
+    PRINT_INPUT_PARAM_KSTMODEL("打印先测推知识点入参", "PRINT_INPUT_PARAM_KSTMODEL"),
+    PRINT_OUTPUT_PARAM_KSTMODEL("打印先测推知识点出参", "PRINT_OUTPUT_PARAM_KSTMODEL"),
+    PRINT_INPUT_PARAM_NLIMODEL("打印学习阶段推知识点入参", "PRINT_INPUT_PARAM_NLIMODEL"),
+    PRINT_OUTPUT_PARAM_NLIMODEL("打印学习阶段推知识点出参", "PRINT_OUTPUT_PARAM_NLIMODEL"),
+    PRINT_INPUT_PARAM_RECOMITEM("打印推送题目入参", "PRINT_INPUT_PARAM_RECOMITEM"),
+    PRINT_OUTPUT_PARAM_RECOMITEM("打印推送题目出参", "PRINT_OUTPUT_PARAM_RECOMITEM"),
+    PRINT_INPUT_PARAM_BKT("打印BKT算法入参", "PRINT_INPUT_PARAM_BKT"),
+    PRINT_OUTPUT_PARAM_BKT("打印BKT算法出参", "PRINT_OUTPUT_PARAM_BKT"),
+    PRINT_INPUT_PARAM_MASTERY("打印知识点掌握率计算入参", "PRINT_INPUT_PARAM_MASTERY"),
+    PRINT_OUTPUT_PARAM_MASTERY("打印知识点掌握率计算出参", "PRINT_OUTPUT_PARAM_MASTERY"),
+    PRINT_ASSESSMODEL("打印推题模型调用入参出参统计是否正常推题","PRINT_ASSESSMODEL"),
+    // cms 传输数据用的枚举
+    SEND_MESSAGE("发送消息", "SEND_MESSAGE"),
+    CMS_TRANSFER_DATA("CMS传输数据", "CMS_TRANSFER_DATA"),;
+
+    private String desc;
+    private String code;
+
+    EventActionTypeEnum(String desc, String code) {
+        this.desc = desc;
+        this.code = code;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+}
