@@ -2,7 +2,6 @@ package com.ikaimen.fastjson;
 
 
 import org.springframework.beans.BeanUtils;
-import sun.tools.java.Environment;
 
 /**
  * @ClassName TestBeanUtil

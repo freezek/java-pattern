@@ -1,7 +1,5 @@
 package com.ikaimen.javase;
 
-import com.sun.tools.javac.util.Assert;
-
 import java.util.*;
 
 /**
@@ -28,7 +26,6 @@ public class TestHashCodeAndEquals {
         System.out.println(map.get(a2));
         set.add(a1);
         set.add(a2);
-        Assert.check(a1.equals(a2));
         Iterator iterator = map.entrySet().iterator();
 
 

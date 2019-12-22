@@ -1,6 +1,5 @@
 package com.ikaimen.fastjson;
 
-import com.sun.istack.internal.NotNull;
 import org.springframework.lang.NonNull;
 
 /**
