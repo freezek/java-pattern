@@ -1,5 +1,8 @@
 package com.ikaimen.fastjson;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
+
 /**
  * @ClassName Class
  * @Description TODO
@@ -8,44 +11,15 @@ package com.ikaimen.fastjson;
  * @ModifyDate 2019/6/29 3:39 PM
  * @Version 1.0
  */
+@Data
+//@JsonIgnoreProperties(ignoreUnknown = true)
 public class Class {
 
     private int num;
 
     private String name;
 
-    private int grade;
+   // private int grade;
 
-    public int getNum() {
-        return num;
-    }
 
-    public void setNum(int num) {
-        this.num = num;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getGrade() {
-        return grade;
-    }
-
-    public void setGrade(int grade) {
-        this.grade = grade;
-    }
-
-    @Override
-    public String toString() {
-        return "Class{" +
-                "num=" + num +
-                ", name='" + name + '\'' +
-                ", grade=" + grade +
-                '}';
-    }
 }

@@ -23,7 +23,7 @@ public class TestGson {
         Class c = new Class();
         c.setName("abc");
         c.setNum(102);
-        c.setGrade(6);
+       // c.setGrade(6);
         System.out.println(getMD5(new Gson().toJson(c)));
         System.out.println(getMD5(JSON.toJSONString(c)));
     }
