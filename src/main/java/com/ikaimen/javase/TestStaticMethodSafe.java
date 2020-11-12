@@ -1,7 +1,5 @@
 package com.ikaimen.javase;
 
-import sun.tools.jconsole.Worker;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
