@@ -62,4 +62,25 @@ public class User  implements Serializable{
                 '}';
     }
 
+    public static void main(String[] args) {
+
+        User user = new User();
+
+        User user1 = new User();
+
+        User test = user1.test(user);
+        System.out.println("3"+test.toString());
+        System.out.println("4"+user1.toString());
+
+    }  
+
+    private User test(User user){
+        User user1 = new User();
+        user1.setName("12");
+        user = user1;
+        user.setName("ziqian");
+        System.out.println("1"+user.toString());
+        System.out.println("2"+user1.toString());
+        return user;
+    }
 }
