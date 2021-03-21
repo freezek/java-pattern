@@ -5,6 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author Mr.Chen
@@ -19,6 +20,8 @@ public class ServerBetter {
     private static ServerSocket server;
     //线程池 懒汉式的单例
     private static ExecutorService executorService = Executors.newFixedThreadPool(60);
+    //计数器
+    private static AtomicInteger count = new AtomicInteger(0);
     //根据传入参数设置监听端口，如果没有参数调用以下方法并使用默认值
     public static void start() throws IOException {
         //使用默认值
@@ -38,6 +41,7 @@ public class ServerBetter {
                 Socket socket = server.accept();
                 //当有新的客户端接入时，会执行下面的代码
                 //然后创建一个新的线程处理这条Socket链路
+                System.out.println("总运算次数："+count.incrementAndGet());;
                 executorService.execute(new ServerHandler(socket));
             }
         }finally{

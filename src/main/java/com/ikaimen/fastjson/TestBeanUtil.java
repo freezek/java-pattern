@@ -21,7 +21,7 @@ public class TestBeanUtil {
 
         Class clazz = new Class();
 
-        clazz.setGrade(7);
+        //clazz.setGrade(7);
         clazz.setName("尖子班");
         clazz.setNum(002);
 

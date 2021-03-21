@@ -1,16 +1,9 @@
-package com.ikaimen.kit;
+package com.ikaimen.protostuff;
 
 import com.ikaimen.fastjson.Class;
 import com.ikaimen.fastjson.User;
-import io.protostuff.LinkedBuffer;
-import io.protostuff.ProtostuffIOUtil;
-import io.protostuff.runtime.RuntimeSchema;
 
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.io.*;
 
 /**
  * @ClassName Test
@@ -23,7 +16,7 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 public class Test {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         User user = new User();
 
@@ -73,18 +66,34 @@ public class Test {
 //        System.out.println("反序列化耗时："+(System.currentTimeMillis() - start1));
 //
 //        System.out.println("hello".getBytes());
+        String file = "./test.txt";
+        FileOutputStream fileOutputStream = new FileOutputStream(file);
+        for (int i = 0; i < 1000000000; i++) {
+            byte[] bytes = ProtoStuffUtil.serialize(user);
+            fileOutputStream.write(bytes);
+            fileOutputStream.flush();
+        }
 
-        byte[] bytes = ProtoStuffUtil.serialize(user);
 
+//        BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+//        String s = "";
+//        StringBuilder result = new StringBuilder();
+//        while ((s = bufferedReader.readLine()) != null) {
+//            //使用readLine方法，一次读一行
+//            result.append(System.lineSeparator() + s);
+//        }
+//        bufferedReader.close();
+//
+//        User unserialize = ProtoStuffUtil.unserialize(bytes, User.class);
 
-        System.out.println('k'^'p');
-        System.out.println(Character.hashCode('k'));
-        System.out.println(Character.hashCode('p'));
-        System.out.println(Integer.toBinaryString(107));
-        System.out.println(Integer.toBinaryString(112));
-
-        System.out.println(Integer.toBinaryString(107));
-        System.out.println(Integer.toBinaryString(112));
+//        System.out.println('k' ^ 'p');
+//        System.out.println(Character.hashCode('k'));
+//        System.out.println(Character.hashCode('p'));
+//        System.out.println(Integer.toBinaryString(107));
+//        System.out.println(Integer.toBinaryString(112));
+//
+//        System.out.println(Integer.toBinaryString(107));
+//        System.out.println(Integer.toBinaryString(112));
 
 
     }

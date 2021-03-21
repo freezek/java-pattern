@@ -1,5 +1,8 @@
 package com.ikaimen.javase.exception;
 
+import com.alibaba.fastjson.JSON;
+import org.apache.commons.lang3.exception.ExceptionUtils;
+
 import java.io.IOException;
 import java.sql.Date;
 import java.sql.Timestamp;
@@ -28,6 +31,8 @@ public class TestException {
                 testException();
             } catch (DemoException ex) {
                 ex.printStackTrace();
+
+                System.out.println("==="+ ExceptionUtils.getStackTrace(ex));
             }finally {
                 System.out.println(a);
             }

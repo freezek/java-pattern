@@ -1,5 +1,8 @@
 package com.ikaimen.fastjson;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.io.Serializable;
 
 /**
@@ -10,10 +13,12 @@ import java.io.Serializable;
  * @ModifyDate 2019/6/28 7:54 PM
  * @Version 1.0
  */
+@JsonIgnoreProperties
 public class User  implements Serializable{
 
     private String name;
 
+    @Deprecated
     private String sex;
 
     private int age;
