@@ -24,7 +24,7 @@ public class ExecutorServiceTest {
             tasks.add(new CallableTask());
         }
 
-        List<Future<String>> futures = executorService.invokeAll(tasks, 1200, TimeUnit.MILLISECONDS);
+        List<Future<String>> futures = executorService.invokeAll(tasks, 1000, TimeUnit.MILLISECONDS);
         Thread.sleep(10000);
         futures.stream().forEach(future ->{
 
@@ -46,7 +46,6 @@ public class ExecutorServiceTest {
             }
         });
 
-        this.wait();
 
     }
 
