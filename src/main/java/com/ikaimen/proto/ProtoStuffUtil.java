@@ -1,4 +1,4 @@
-package com.ikaimen.protostuff;
+package com.ikaimen.protoc.protostuff;
 
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.util.TypeUtils;

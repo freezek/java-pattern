@@ -1,0 +1,14 @@
+// 指定protobuf的版本，proto3是最新的语法版本
+syntax = "proto2";
+package protoc;
+
+option java_multiple_files = false;
+option java_package = "com.ikaimen.proto";
+option java_outer_classname = "MyResponse";
+// 定义数据结构，message 你可以想象成java的class，c语言中的struct
+message Response {
+   optional string data = 1;   // 定义一个string类型的字段，字段名字为data, 序号为1
+   optional int32 status = 2;   // 定义一个int32类型的字段，字段名字为status, 序号为2
+   optional string code = 3;
+   map<string, string> map_field  = 4;
+}

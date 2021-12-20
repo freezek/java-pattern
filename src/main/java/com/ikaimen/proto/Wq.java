@@ -1,4 +1,4 @@
-package com.ikaimen.protostuff;
+package com.ikaimen.protoc.protostuff;
 
 
 import java.io.FileOutputStream;

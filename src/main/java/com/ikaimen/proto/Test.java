@@ -1,4 +1,4 @@
-package com.ikaimen.protostuff;
+package com.ikaimen.protoc.protostuff;
 
 import com.ikaimen.fastjson.Class;
 import com.ikaimen.fastjson.User;
